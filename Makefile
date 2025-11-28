@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -fsanitize=thread
+CFLAGS = -Wall -fsanitize=thread 
 
 main: main.o threadpool.o
 	$(CC) $(CFLAGS) main.o threadpool.o -o main
