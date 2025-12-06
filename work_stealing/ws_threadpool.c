@@ -78,19 +78,6 @@ void *work_func(void *arg) {
 
   current_worker = our_worker;
 
-  if (our_worker == NULL) {
-  fprintf(stderr, "work_func: our_worker == NULL! aborting\n");
-  abort();
-}
-if (our_worker->dequeue == NULL) {
-  fprintf(stderr, "work_func: our_worker->dequeue == NULL! aborting\n");
-  abort();
-}
-if (our_worker->tp == NULL) {
-  fprintf(stderr, "work_func: our_worker->tp == NULL! aborting\n");
-  abort();
-}
-
   unsigned int seed = time(NULL) ^ (unsigned long) pthread_self();
 
   while (true) {
